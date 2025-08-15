@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>FreshPath • TCS Preparation</title>
+	<link href="../styles.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="navbar">
+		<div class="container nav-inner">
+			<a class="brand" href="../index.html">FreshPath</a>
+			<nav class="nav-links">
+				<a href="../index.html#company-prep">Back</a>
+			</nav>
+		</div>
+	</header>
+	<main class="section">
+		<div class="container">
+			<div style="display:flex;align-items:center;gap:10px;">
+				<img src="../assets/tcs.svg" alt="TCS" width="40" height="40" />
+				<h1 style="margin:0">TCS Preparation</h1>
+			</div>
+			<p class="section-subtitle">Aptitude, Coding, and Previous Year Questions tailored to TCS NQT.</p>
+
+			<div class="split">
+				<section>
+					<h3>Aptitude</h3>
+					<ul class="tips">
+						<li>Number systems, ratios, percentages, speed & distance.</li>
+						<li>Practice 20 questions daily with a 30 min timer.</li>
+					</ul>
+					<button class="btn btn-primary" onclick="alert('Starting TCS aptitude set...')">Start Aptitude Set</button>
+				</section>
+				<section>
+					<h3>Coding</h3>
+					<ul class="tips">
+						<li>Arrays, strings, basic DP. Languages: C/C++/Java/Python.</li>
+						<li>Focus on I/O formatting and constraints.</li>
+					</ul>
+					<button class="btn btn-outline" onclick="alert('Starting TCS coding set...')">Start Coding Set</button>
+				</section>
+			</div>
+
+			<section style="margin-top:18px">
+				<h3>Previous Year Questions</h3>
+				<div class="roadmap-panel">
+					<div>Q1: Probability of drawing two red balls from a bag...</div>
+					<div>Q2: Given a string, find first non-repeating character...</div>
+					<div>Q3: OS: Difference between process and thread?</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="footer"><div class="container">© <span id="year"></span> FreshPath</div></footer>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

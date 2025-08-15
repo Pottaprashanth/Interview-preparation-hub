@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>FreshPath • Infosys Preparation</title>
+	<link href="../styles.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="navbar">
+		<div class="container nav-inner">
+			<a class="brand" href="../index.html">FreshPath</a>
+			<nav class="nav-links">
+				<a href="../index.html#company-prep">Back</a>
+			</nav>
+		</div>
+	</header>
+	<main class="section">
+		<div class="container">
+			<div style="display:flex;align-items:center;gap:10px;">
+				<img src="../assets/infosys.svg" alt="Infosys" width="40" height="40" />
+				<h1 style="margin:0">Infosys Preparation</h1>
+			</div>
+			<p class="section-subtitle">Verbal, Reasoning, and Coding focused for Infosys recruitment.</p>
+
+			<div class="split">
+				<section>
+					<h3>Verbal</h3>
+					<ul class="tips">
+						<li>Reading comprehension, error spotting, sentence improvement.</li>
+					</ul>
+					<button class="btn btn-primary" onclick="alert('Starting Infosys verbal set...')">Start Verbal Set</button>
+				</section>
+				<section>
+					<h3>Reasoning</h3>
+					<ul class="tips">
+						<li>Seating arrangement, syllogisms, coding-decoding.</li>
+					</ul>
+					<button class="btn btn-outline" onclick="alert('Starting Infosys reasoning set...')">Start Reasoning Set</button>
+				</section>
+			</div>
+
+			<section style="margin-top:18px">
+				<h3>Previous Year Questions</h3>
+				<div class="roadmap-panel">
+					<div>Q1: Choose the grammatically correct sentence...</div>
+					<div>Q2: Arrangement puzzle with 5 students and 5 cities...</div>
+					<div>Q3: Coding: Reverse words in a sentence preserving spaces.</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="footer"><div class="container">© <span id="year"></span> FreshPath</div></footer>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
