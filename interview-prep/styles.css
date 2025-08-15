@@ -1,0 +1,142 @@
+/* Design tokens */
+:root {
+	--bg: #f8fbff;
+	--surface: #ffffff;
+	--ink: #0b2239;
+	--muted: #5d7285;
+	--primary: #2563eb; /* blue */
+	--primary-600: #1d4ed8;
+	--teal: #0ea5a4; /* teal */
+	--accent: #60a5fa;
+	--ring: rgba(37, 99, 235, 0.35);
+	--success: #16a34a;
+	--warning: #f59e0b;
+	--danger: #ef4444;
+	--radius: 14px;
+	--shadow: 0 10px 30px rgba(2, 14, 36, 0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: 'Inter', 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	color: var(--ink);
+	background: linear-gradient(180deg, #f7fbff 0%, #eef7ff 100%);
+}
+
+.container {
+	width: min(1120px, 92vw);
+	margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 40;
+	background: rgba(255,255,255,0.9);
+	backdrop-filter: saturate(160%) blur(10px);
+	border-bottom: 1px solid #e6eefc;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { font-weight: 800; letter-spacing: -0.02em; font-size: 1.25rem; color: var(--primary); }
+.nav-links { display: flex; gap: 18px; }
+.nav-links a { color: var(--ink); text-decoration: none; font-weight: 500; padding: 10px 12px; border-radius: 10px; }
+.nav-links a:hover { background: #eef4ff; }
+.nav-toggle { display: none; border: none; background: transparent; font-size: 1.5rem; }
+
+@media (max-width: 860px) {
+	.nav-links { display: none; position: absolute; right: 16px; top: 58px; background: var(--surface); box-shadow: var(--shadow); padding: 10px; border-radius: 12px; flex-direction: column; }
+	.nav-toggle { display: inline-flex; }
+}
+
+/* Hero */
+.hero { padding: 64px 0 24px; }
+.hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.hero-copy h1 { font-family: 'Poppins', sans-serif; font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 10px; letter-spacing: -0.02em; }
+.hero-copy p { color: var(--muted); margin: 0 0 18px; font-size: 1.05rem; }
+.hero-cta-group { display: flex; gap: 12px; margin: 18px 0 12px; }
+.hero-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.badge { background: #eef7ff; color: #11407a; padding: 6px 10px; border-radius: 999px; font-size: 0.85rem; border: 1px solid #d8e9ff; }
+
+.hero-visual { position: relative; height: 360px; }
+.holo { position: absolute; inset: 0; background: radial-gradient(60% 60% at 40% 40%, rgba(96,165,250,0.35), rgba(14,165,164,0.25) 50%, transparent 65%); filter: blur(20px); }
+.laptop { position: absolute; right: 0; top: 20px; width: clamp(260px, 38vw, 420px); height: clamp(180px, 26vw, 300px); background: #0f172a; border-radius: 16px; box-shadow: 0 16px 40px rgba(16, 24, 40, 0.25); border: 1px solid #0b1220; }
+.screen { position: absolute; inset: 12px; border-radius: 10px; background: linear-gradient(135deg, #0b2440, #0a2b4d); display: grid; place-items: center; }
+.ai-face { width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #60a5fa 0%, #1d4ed8 45%, #0ea5a4 100%); box-shadow: 0 0 40px rgba(96,165,250,0.55), 0 0 30px rgba(14,165,164,0.45) inset; }
+
+/* Sections */
+.section { padding: 56px 0; }
+.section.alt { background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%); border-top: 1px solid #eef4ff; border-bottom: 1px solid #eef4ff; }
+.section h2 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin: 0 0 8px; }
+.section-subtitle { color: var(--muted); margin: 0 0 24px; }
+
+.company-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.company-card { display: grid; gap: 6px; padding: 14px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); text-decoration: none; color: var(--ink); border: 1px solid #e8f0ff; transition: transform .15s ease, box-shadow .15s ease; }
+.company-card:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(2, 14, 36, 0.12); }
+.company-card img { width: 46px; height: 46px; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.exam-panel { display: grid; grid-template-columns: 260px 1fr; gap: 16px; }
+.exam-controls { background: var(--surface); border: 1px solid #e7eeff; border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); display: grid; gap: 12px; align-content: start; }
+.exam-controls select { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #d9e5ff; }
+.timer { font-weight: 700; color: var(--primary); font-size: 1.4rem; }
+.exam-viewport { min-height: 200px; background: var(--surface); border: 1px dashed #cfe0ff; border-radius: var(--radius); display: grid; place-items: center; color: var(--muted); padding: 16px; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.skill-card { padding: 12px 10px; border-radius: 12px; background: var(--surface); border: 1px solid #e6efff; cursor: pointer; font-weight: 600; color: #0b365d; box-shadow: var(--shadow); }
+.skill-card:hover { background: #f3f8ff; }
+
+.roadmap-panel { background: var(--surface); border: 1px solid #e6efff; border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); display: grid; gap: 10px; }
+
+.tracker-form { display: grid; grid-template-columns: 1fr 160px 1fr 120px; gap: 8px; }
+.tracker-form input, .tracker-form select, .resume-form input, .resume-form textarea { padding: 10px; border-radius: 10px; border: 1px solid #d9e5ff; width: 100%; }
+.tracker-list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 8px; }
+.tracker-list li { display: grid; grid-template-columns: 1fr 140px 1fr auto; gap: 10px; align-items: center; background: var(--surface); border: 1px solid #e7eeff; border-radius: 12px; padding: 10px; }
+.status { padding: 6px 10px; border-radius: 999px; font-weight: 600; }
+.status.Pending { background: #fff7ed; color: #92400e; border: 1px solid #fed7aa; }
+.status.Selected { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.status.Rejected { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+.resume-form { display: grid; gap: 10px; }
+.tips { margin: 0; padding-left: 18px; color: var(--muted); }
+
+.badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.leaderboard { margin: 14px 0 0; padding-left: 18px; }
+
+/* Testimonials */
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.testimonial-card { background: var(--surface); border: 1px solid #e6efff; border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); display: grid; gap: 10px; }
+.testimonial-card .avatar { width: 42px; height: 42px; border-radius: 50%; background: #e0f2fe; color: #075985; display: grid; place-items: center; font-weight: 800; }
+.testimonial-card .who { color: var(--muted); font-size: 0.9rem; }
+
+/* Streak */
+.streak { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--surface); border: 1px solid #e6efff; border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); margin-bottom: 12px; }
+.streak-actions { display: flex; align-items: center; gap: 10px; }
+
+.footer { padding: 24px 0 60px; color: var(--muted); text-align: center; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 12px; font-weight: 700; text-decoration: none; cursor: pointer; border: 1px solid transparent; }
+.btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 24px rgba(37,99,235,0.25); }
+.btn-primary:hover { background: var(--primary-600); }
+.btn-outline { background: white; color: var(--primary); border-color: #c8dbff; }
+.btn-outline:hover { background: #eff6ff; }
+
+/* Responsive */
+@media (max-width: 980px) {
+	.company-grid { grid-template-columns: repeat(3, 1fr); }
+	.exam-panel { grid-template-columns: 1fr; }
+	.split { grid-template-columns: 1fr; }
+	.testimonials { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+	.hero-inner { grid-template-columns: 1fr; }
+	.company-grid { grid-template-columns: repeat(2, 1fr); }
+	.skills-grid { grid-template-columns: repeat(2, 1fr); }
+	.tracker-form { grid-template-columns: 1fr; }
+	.tracker-list li { grid-template-columns: 1fr; }
+	.testimonials { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>FreshPath - Interview Preparation for Freshers</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="navbar">
+		<div class="container nav-inner">
+			<div class="brand">FreshPath</div>
+			<nav class="nav-links" aria-label="Primary Navigation">
+				<a href="#home">Home</a>
+				<a href="#company-prep">Company Prep</a>
+				<a href="#mock-interviews">Mock Interviews</a>
+				<a href="#exams">Exams</a>
+				<a href="#resources">Resources</a>
+				<a href="#dashboard">Dashboard</a>
+			</nav>
+			<button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">☰</button>
+		</div>
+	</header>
+
+	<main id="home" class="hero">
+		<div class="container hero-inner">
+			<div class="hero-copy">
+				<h1>Launch your career with confidence</h1>
+				<p>AI-powered interview prep for freshers: company-wise tests, mock interviews, personalized roadmaps, and analytics.</p>
+				<div class="hero-cta-group">
+					<a class="btn btn-primary" href="#mock-interviews">Start Mock Interview</a>
+					<a class="btn btn-outline" href="#exams">Take Exam</a>
+				</div>
+				<div class="hero-badges" role="list" aria-label="Highlights">
+					<div class="badge">AI Feedback</div>
+					<div class="badge">Company Patterns</div>
+					<div class="badge">Gamified</div>
+				</div>
+			</div>
+			<div class="hero-visual" aria-hidden="true">
+				<div class="holo"></div>
+				<div class="laptop">
+					<div class="screen">
+						<div class="ai-face"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<section id="company-prep" class="section">
+		<div class="container">
+			<h2>Company-Wise Preparation</h2>
+			<p class="section-subtitle">Practice with real patterns for top recruiters.</p>
+			<div class="company-grid">
+				<a class="company-card" data-company="TCS" href="companies/tcs.html" aria-label="TCS Preparation">
+					<img src="assets/tcs.svg" alt="TCS logo" />
+					<h3>TCS</h3>
+					<p>Aptitude • Coding • PYQ</p>
+				</a>
+				<a class="company-card" data-company="Infosys" href="companies/infosys.html" aria-label="Infosys Preparation">
+					<img src="assets/infosys.svg" alt="Infosys logo" />
+					<h3>Infosys</h3>
+					<p>Verbal • Reasoning • Coding</p>
+				</a>
+				<a class="company-card" data-company="Wipro" href="companies/wipro.html" aria-label="Wipro Preparation">
+					<img src="assets/wipro.svg" alt="Wipro logo" />
+					<h3>Wipro</h3>
+					<p>Aptitude • Coding • PYQ</p>
+				</a>
+				<a class="company-card" data-company="Accenture" href="companies/accenture.html" aria-label="Accenture Preparation">
+					<img src="assets/accenture.svg" alt="Accenture logo" />
+					<h3>Accenture</h3>
+					<p>Reasoning • English • Coding</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="mock-interviews" class="section alt">
+		<div class="container">
+			<div class="section-head">
+				<h2>Mock Interview Module</h2>
+				<p class="section-subtitle">AI-based and mentor-led simulations with instant feedback.</p>
+			</div>
+			<div class="split">
+				<div>
+					<h3>AI Interview</h3>
+					<p>Answer adaptive questions via mic or text. Get insights on clarity, confidence, and structure.</p>
+					<button class="btn btn-primary" id="start-ai-interview">Start AI Interview</button>
+				</div>
+				<div>
+					<h3>Human-led</h3>
+					<p>Book a session with industry mentors for role-play interview and feedback.</p>
+					<button class="btn btn-outline">Book Mentor</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="exams" class="section">
+		<div class="container">
+			<h2>Exam Simulation</h2>
+			<p class="section-subtitle">Timed mock tests mirroring real patterns.</p>
+			<div class="exam-panel">
+				<div class="exam-controls">
+					<label>
+						<span>Duration</span>
+						<select id="exam-duration">
+							<option value="15">15 min</option>
+							<option value="30">30 min</option>
+							<option value="45">45 min</option>
+						</select>
+					</label>
+					<button class="btn btn-primary" id="start-exam">Start Test</button>
+					<div class="timer" id="exam-timer" aria-live="polite">--:--</div>
+				</div>
+				<div class="exam-viewport" id="exam-viewport" aria-live="polite"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="resources" class="section alt">
+		<div class="container">
+			<h2>Skill Training Hub</h2>
+			<p class="section-subtitle">Practice modules across aptitude, reasoning, English, coding, and core CS.</p>
+			<div class="skills-grid">
+				<button class="skill-card" data-skill="aptitude">Aptitude</button>
+				<button class="skill-card" data-skill="reasoning">Reasoning</button>
+				<button class="skill-card" data-skill="english">English</button>
+				<button class="skill-card" data-skill="java">Java</button>
+				<button class="skill-card" data-skill="python">Python</button>
+				<button class="skill-card" data-skill="cpp">C++</button>
+				<button class="skill-card" data-skill="dbms">DBMS</button>
+				<button class="skill-card" data-skill="os">OS</button>
+				<button class="skill-card" data-skill="networking">Networking</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="roadmap" class="section">
+		<div class="container">
+			<h2>Personalized Learning Roadmap</h2>
+			<p class="section-subtitle">Get next-step guidance based on your performance.</p>
+			<div id="roadmap-panel" class="roadmap-panel"></div>
+		</div>
+	</section>
+
+	<section id="tracker" class="section alt">
+		<div class="container">
+			<h2>Interview Tracker</h2>
+			<form id="tracker-form" class="tracker-form" aria-label="Add interview log">
+				<input type="text" id="company" placeholder="Company" required />
+				<select id="result">
+					<option value="Pending">Pending</option>
+					<option value="Selected">Selected</option>
+					<option value="Rejected">Rejected</option>
+				</select>
+				<input type="text" id="notes" placeholder="Notes (optional)" />
+				<button class="btn btn-primary" type="submit">Add</button>
+			</form>
+			<ul id="tracker-list" class="tracker-list"></ul>
+		</div>
+	</section>
+
+	<section id="resume" class="section">
+		<div class="container">
+			<h2>Resume Builder & Tips</h2>
+			<div class="split">
+				<div>
+					<form id="resume-form" class="resume-form">
+						<input type="text" id="name" placeholder="Full Name" required />
+						<input type="email" id="email" placeholder="Email" required />
+						<textarea id="summary" placeholder="Professional Summary" rows="4"></textarea>
+						<button class="btn btn-outline" type="button" id="generate-resume">Generate PDF</button>
+					</form>
+				</div>
+				<div>
+					<ul class="tips">
+						<li>Keep it to 1 page. Focus on projects and internships.</li>
+						<li>Quantify achievements (e.g., improved performance by 30%).</li>
+						<li>Highlight relevant coursework and certifications.</li>
+						<li>Proofread for grammar and consistency.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials" class="section alt">
+		<div class="container">
+			<h2>Success Stories</h2>
+			<p class="section-subtitle">Freshers who cracked their first offer.</p>
+			<div class="testimonials">
+				<article class="testimonial-card">
+					<div class="avatar" aria-hidden="true">A</div>
+					<p>“The mock interviews boosted my confidence. I cleared Infosys!”</p>
+					<div class="who">Ananya • B.Tech 2024</div>
+				</article>
+				<article class="testimonial-card">
+					<div class="avatar" aria-hidden="true">R</div>
+					<p>“Company-wise practice sets matched the real TCS exam pattern.”</p>
+					<div class="who">Rahul • MCA 2023</div>
+				</article>
+				<article class="testimonial-card">
+					<div class="avatar" aria-hidden="true">S</div>
+					<p>“Loved the analytics and roadmap. It kept me focused.”</p>
+					<div class="who">Sneha • BE 2024</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="gamified" class="section alt">
+		<div class="container">
+			<h2>Gamified Learning</h2>
+			<div class="streak">
+				<div>Daily Streak: <strong id="streak-count">0</strong> days</div>
+				<div class="streak-actions">
+					<button class="btn btn-primary" id="streak-checkin">Check in today</button>
+					<span id="streak-status" aria-live="polite"></span>
+				</div>
+			</div>
+			<div class="badges" id="badge-shelf" aria-live="polite"></div>
+			<ol class="leaderboard" id="leaderboard"></ol>
+		</div>
+	</section>
+
+	<section id="dashboard" class="section">
+		<div class="container">
+			<h2>Progress Analytics</h2>
+			<p class="section-subtitle">Track readiness score and improvement.</p>
+			<canvas id="readiness-chart" width="600" height="260" role="img" aria-label="Readiness score chart"></canvas>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<p>© <span id="year"></span> FreshPath. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="app.js" defer></script>
+</body>
+</html>
